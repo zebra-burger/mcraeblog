@@ -22,14 +22,14 @@ html, body {
 }
 
 body {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 2em auto;
     padding: 1em;
 }
 
@@ -174,9 +174,10 @@ button:hover, button:focus {
 
 footer {
     text-align: center;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     color: var(--muted);
     padding: 1em;
+    margin-top: auto;
 }
 
 h1 {
@@ -200,7 +201,6 @@ nav a:hover, nav a:focus {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5em;
-    margin-top: 2em;
 }
 
 .postslist-item {
@@ -209,15 +209,16 @@ nav a:hover, nav a:focus {
     padding: 1em;
     background-color: var(--secondary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.postslist-item:hover, .postslist-item:focus {
+.postslist-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .postslist-item h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--primary);
     margin-bottom: 0.5em;
 }
@@ -225,6 +226,21 @@ nav a:hover, nav a:focus {
 .postslist-item p {
     color: var(--muted);
     font-size: 0.875rem;
+    margin-bottom: 1em;
+}
+
+.postslist-item a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--accent);
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.postslist-item a:hover {
+    background-color: var(--primary);
 }
 
 @media screen and (min-width: 768px) {

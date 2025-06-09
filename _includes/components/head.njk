@@ -1,17 +1,14 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="{{ eleventy.generator }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0C1C1F">
-  <title>{{ title or metadata.title }}</title>
-  <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
-  <meta name="keywords" content="{{ metadata.keywords }}">
-  <meta property="og:title" content="{{ title or metadata.title }}">
-  <meta property="og:description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
-  <meta property="og:image" content="{{ metadata.meta_image }}">
-  <meta property="og:url" content="{{ metadata.url }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="{{ metadata.favicon }}" type="image/x-icon">
-  <link rel="stylesheet" href="/assets/css/inline.css">
-  <script defer src="/assets/js/inline.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0C1C1F">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ metaDescription }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:url" content="https://blog.mcr.ae">
+    <meta property="og:image" content="/assets/images/social-share.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/inline.css">
 </head>

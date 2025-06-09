@@ -1,23 +1,24 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html lang="en">
 
-	{% include "components/head.njk" %}
+    {% include "components/head.njk" %}
 
-	<body>
+    <body>
 
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
-		</header>
+        <header>
+            <em class="site-logo">
+                <a href="{{ '/' | url }}">Blog.MCR.AE</a>
+            </em>
+        </header>
 
-		<main>
-			{{ layoutContent | safe }}
-		</main>
+        <main>
+            {{ layoutContent | safe }}
+        </main>
 
-		{% include "components/footer.njk" %}
+        <footer>
+            <small>© {{ new Date().getFullYear() }} MCR.AE. All rights reserved.</small>
+        </footer>
 
-	</body>
+    </body>
 
 </html>

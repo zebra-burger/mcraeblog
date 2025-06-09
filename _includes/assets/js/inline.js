@@ -102,3 +102,28 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// Schema.org JSON-LD markup
+document.addEventListener('DOMContentLoaded', () => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "url": "https://blog.mcr.ae",
+        "name": "MCR.AE Blog",
+        "description": "Explore the latest blog posts from MCR.AE.",
+        "blogPost": [
+            {% for post in collections.posts %}
+            {
+                "@type": "BlogPosting",
+                "headline": "{{ post.data.title }}",
+                "description": "{{ post.data.description }}",
+                "url": "{{ post.url }}",
+                "datePublished": "{{ post.date | date('yyyy-MM-dd') }}"
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    });
+    document.head.appendChild(script);
+});

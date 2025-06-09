@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: "Blog | MCR.AE"
+metaDescription: "Explore the latest blog posts from MCR.AE."
+---
+
+<section class="postslist">
+    {% for post in collections.posts %}
+    <article class="postslist-item">
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.description }}</p>
+        <a href="{{ post.url }}">Read More</a>
+    </article>
+    {% endfor %}
+</section>

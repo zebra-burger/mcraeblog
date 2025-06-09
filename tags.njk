@@ -15,11 +15,13 @@ eleventyComputed:
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
+<section class="tag-page">
+  <h1 class="tag-title">Posts Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[tag] %}
-{% include "components/postslist.njk" %}
+  {% set postslist = collections[tag] %}
+  {% include "components/postslist.njk" %}
 
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>
+  <nav class="tag-nav">
+    <a href="{{ '/blog/' | url }}" class="back-link">← Back to Blog Index</a>
+  </nav>
+</section>
