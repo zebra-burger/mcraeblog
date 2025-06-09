@@ -37,32 +37,6 @@ backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Dark mode toggle
-const darkModeToggle = document.createElement('button');
-darkModeToggle.id = 'dark-mode-toggle';
-darkModeToggle.textContent = '🌙';
-darkModeToggle.style.position = 'fixed';
-darkModeToggle.style.bottom = '20px';
-darkModeToggle.style.left = '20px';
-darkModeToggle.style.padding = '10px 15px';
-darkModeToggle.style.border = 'none';
-darkModeToggle.style.borderRadius = '50%';
-darkModeToggle.style.backgroundColor = '#0C1C1F';
-darkModeToggle.style.color = '#FFFFFF';
-darkModeToggle.style.cursor = 'pointer';
-darkModeToggle.style.zIndex = '1000';
-document.body.appendChild(darkModeToggle);
-
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-});
-
-// Load dark mode preference
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
-
 // Lazy load images
 document.addEventListener('DOMContentLoaded', () => {
     const lazyImages = document.querySelectorAll('img[data-src]');
@@ -114,15 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "name": "MCR.AE Blog",
         "description": "Explore the latest blog posts from MCR.AE.",
         "blogPost": [
-            {% for post in collections.posts %}
+            // Replace this block with server-side rendering logic
             {
                 "@type": "BlogPosting",
-                "headline": "{{ post.data.title }}",
-                "description": "{{ post.data.description }}",
-                "url": "{{ post.url }}",
-                "datePublished": "{{ post.date | date('yyyy-MM-dd') }}"
-            }{% if not loop.last %},{% endif %}
-            {% endfor %}
+                "headline": "Sample Blog Post",
+                "description": "This is a sample blog post description.",
+                "url": "https://blog.mcr.ae/sample-blog-post",
+                "datePublished": "2025-06-09"
+            }
         ]
     });
     document.head.appendChild(script);
