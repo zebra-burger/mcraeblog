@@ -2,15 +2,16 @@
   <meta charset="utf-8">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0C1C1F">
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
-  {% set css %}
-    {% include "assets/css/inline.css" %}
-  {% endset %}
-  <style>{{ css | cssmin | safe }}</style>
-  {# Uncomment below if you want to include minified inline JavaScript #}
-  {# {% set js %}
-    {% include "assets/js/inline.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script> #}
+  <meta name="keywords" content="{{ metadata.keywords }}">
+  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
+  <meta property="og:image" content="{{ metadata.meta_image }}">
+  <meta property="og:url" content="{{ metadata.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{ metadata.favicon }}" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/inline.css">
+  <script defer src="/assets/js/inline.js"></script>
 </head>
