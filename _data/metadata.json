@@ -1,5 +1,15 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "description": "A template for building a simple blog website with the Eleventy static site generator, Decap CMS, and with deployment to Netlify.",
-  "url": "https://eleventy-netlify-boilerplate.netlify.app"
+  "title": "MCR.AE | Strategic Marketing & Digital Advisory",
+  "url": "https://www.mcr.ae",
+  "author": {
+    "name": "Gary McRae",
+    "email": "gary@mcr.ae",
+    "url": "https://www.mcr.ae"
+  },
+  "language": "en",
+  "description": "Gary McRae helps leaders make marketing make sense. Led by Gary McRae, we deliver fractional CMO leadership and marketing clarity for ambitious firms in Singapore and Asia.",
+  "keywords": "fractional CMO Singapore, digital strategy, brand clarity, marketing consultancy Asia, Gary McRae, MCR.AE, marketing leadership, B2B marketing advisory",
+  "meta_image": "/assets/images/social-share.jpg",
+  "favicon": "/favicon.ico",
+  "theme_color": "#0C1C1F"
 }
