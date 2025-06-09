@@ -1,14 +1,10 @@
 ---
 layout: layouts/base.njk
+permalink: "/authors/{{ author.slug }}/"
 pagination:
-  data: collections.authors
+  data: authors
   size: 1
   alias: author
-permalink: "authors/{{ author | slug }}/"
-eleventyComputed:
-  author: "{{ author }}"
-  title: "Posts by {{ author }}"
-  metaDescription: "An archive of all posts by the author: {{ author }}."
 ---
 
 <h1>{{ title }}</h1>
@@ -51,3 +47,18 @@ eleventyComputed:
     <a href="{{ '/authors/' | url }}">← Authors index</a>
   </nav>
 </section>
+
+<script>
+  const authors = [
+    {
+      "name": "John Appleseed",
+      "slug": "john-appleseed",
+      "bio": "A sample author bio."
+    },
+    {
+      "name": "Jane Doe",
+      "slug": "jane-doe",
+      "bio": "Another sample author bio."
+    }
+  ];
+</script>
