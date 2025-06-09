@@ -1,0 +1,12 @@
+[
+  {
+    "name": "John Appleseed",
+    "slug": "john-appleseed",
+    "bio": "A sample author bio."
+  },
+  {
+    "name": "Jane Doe",
+    "slug": "jane-doe",
+    "bio": "Another sample author bio."
+  }
+]
